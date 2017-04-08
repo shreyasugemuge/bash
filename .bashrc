@@ -1,9 +1,13 @@
 #!/bin/TMUX
 
-export PS1="\[\e[0;37m\][\`if [ \$? = 0 ]; then echo \[\e[33m\]^_^\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;36m\]\w\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;32m\]\H\[\e[0;37m\]:\[\e[0;33m\]\u\[\e[0;37m\]]\n\$ \[\e[0m\]"
+export PS1="\[\e[0;37m\][\`if [ \$? = 0 ]; then echo \[\e[33m\]-_-\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;36m\]\w\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;32m\]\H\[\e[0;37m\]:\[\e[0;33m\]\u\[\e[0;37m\]]\n\$ \[\e[0m\]"
 
-#beginnin
-figlet -c hello shreyas | pv -qL 550 | lolcat
+#open this
+alias bashrc='emacs ~/.bashrc'
+alias bashnet='emacs ~/.bash_net'
+
+#beginning fancy stuff
+#figlet -c hello shreyas | pv -qL 550 | lolcat
 #fortune -s | cowsay -f tux
 
 #quick hacks
