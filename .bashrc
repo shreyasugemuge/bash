@@ -5,7 +5,9 @@
 export PS1="\[\e[0;37m\][\`if [ \$? = 0 ]; then echo \[\e[33m\]-_-\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;36m\]\w\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;32m\]\H\[\e[0;37m\]:\[\e[0;33m\]\u\[\e[0;37m\]]\n\$ \[\e[0m\]"
 export EDITOR="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
 
+
 #push this to the repo
+#the repopath can be changed
 REPOPATH="/Users/shreyasugemuge/some_git_repos/bash"
 BRC=".bashrc"
 BNT=".bash_net"
@@ -17,7 +19,7 @@ function updaterc()
     echo "Staging files"
     cd $REPOPATH
     git add .
-    git commit -m ""$1""
+    git commit -m ""$@""
     git push
     cd ~
 
