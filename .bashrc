@@ -50,7 +50,7 @@ function updaterc()
     echo "Staging files"
     cd $REPOPATH
     git add .
-    git commit -m ""$@""
+    git commit
     git push
     cd ~
 
