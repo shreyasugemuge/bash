@@ -2,8 +2,39 @@
 # Author: Shreyas Ugemuge
 # Email: shreyas@ugemuge.com
 
-export PS1="\[\e[0;37m\][\`if [ \$? = 0 ]; then echo \[\e[33m\]-_-\[\e[0m\]; else echo \[\e[31m\]O_O\[\e[0m\]; fi\`\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;36m\]\w\[\e[0;37m\]]\[\e[0;37m\][\[\e[0;32m\]\H\[\e[0;37m\]:\[\e[0;33m\]\u\[\e[0;37m\]]\n\$ \[\e[0m\]"
-export EDITOR="/Applications/TextEdit.app/Contents/MacOS/TextEdit"
+# Default editor, set to emacs because
+# that is the only CLI editor you should
+# be using
+export EDITOR="/usr/local/bin/emacs"
+
+
+#Prompt
+lBrace="\[\e[0;37m\]["
+rBrace="\[\e[0;37m\]]"
+
+# Part 1
+# Display [-_-] in green if previous command was successful (error code=0)
+# Display [O_O] in red if previous command was successful (error code!=0)
+codeZero="\$? = 0"
+zeroFace="\[\e[33m\]-_-\[\e[0m\]"
+errFace="\[\e[31m\]O_O\[\e[0m\]"
+face="\`if [ "$codeZero" ]; then echo "$zeroFace"; else echo "$errFace"; fi\`"
+part1=""$lBrace""$face""$rBrace""
+# Part 2
+# Display [current directory]
+curDir="\[\e[0;36m\]\w"
+part2=""$lBrace""$curDir""$rBrace""
+# Part 3
+# Display [Host:user]
+hostHelp="\[\e[0;32m\]\H"
+userHelp="\[\e[0;33m\]\u"
+part3=""$lBrace""$hostHelp"\[\e[0;36m\]:"$userHelp""$rBrace""
+# Part 4
+# A $ on the next line
+part4="\n\$ \[\e[0m\]"
+
+PROMPTHELPER=""$part1""$part2""$part3""$part4""
+export PS1=$PROMPTHELPER
 
 
 #push this to the repo
@@ -25,7 +56,7 @@ function updaterc()
 
 }
 
-# alter the default colors to make them a bit prettier
+# alter the default colors to make look nicer
 echo -en "\e]P0000000" #black
 echo -en "\e]P1D75F5F" #darkred
 echo -en "\e]P287AF5F" #darkgreen
