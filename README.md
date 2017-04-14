@@ -21,5 +21,5 @@ $ emacs PATH_TO_FOLDER/bash/.bashrc
 In case you are unsure about what a prompt is, what are you even doing here?
 Prompt is the line that follows you with each command. Looks different on each system. often ends with $ for a normal user and a # for the root. The default bash prompt for terminal in mac looks something like this
    
-![$](https://github.com/shreyasugemuge/bash/img/def_term.png)
+![$](/img/def_term.png)
 
