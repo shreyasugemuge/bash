@@ -7,7 +7,7 @@ This is for bash only, I know there are more costumizable options and preexistin
 
 Most code will be reproduced here, but there are a ton of comments in the .bashrc file. Whether or not this is independent of computers and all dependecies are mentioned under each feature.
 
-### Getting this file on your computer
+### Getting this file on your computer 
 ```bash
 $ git clone https://github.com/shreyasugemuge/bash
 ```
