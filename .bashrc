@@ -39,6 +39,9 @@ export PS1=$PROMPTHELPER
 # shortcut for bashrepo
 alias bashgit='open https://github.com/shreyasugemuge/bash -a safari'
 
+# yell
+alias yell='figlet'
+
 # push this to the repo
 # the repopath can be changed
 REPOPATH="/Users/shreyasugemuge/some_git_repos/bash"
@@ -130,3 +133,7 @@ alias sesh='echo $SESHECHO && canvas && mail1 && mail2'
 alias celar='clear'
 alias vlear='clear'
 alias cls='clear'
+
+# git
+alias gitget='git fetch && git pull'
+alias gitsend='git commit && git push'
